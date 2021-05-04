@@ -12,8 +12,12 @@
 
   <div id="root">
     <h1 :class="text_color">Ciao {{title}}</h1>
-  <input type="text" v-model='text_color' placeholder="Inserisci classe da cambiare:">
-  <button @changeColor=(red)>ClickMe</button>
+  <input type="text" v-model='text_simple' @keyup.enter="color_new" placeholder="Inserisci classe da cambiare:">
+  <button @click="changeColor('yellow')">ClickMe</button>
+  <button @click="changeColor('grey')">ClickMe</button>
+  <button @click="text_other_color">ClickMe</button>
+
+
 
   </div>
   
